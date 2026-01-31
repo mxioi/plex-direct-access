@@ -1,5 +1,4 @@
-# Plex Direct Access - Bypass Remote Streaming Restrictions
-
+# Plex Direct Access - Plex multi-network streaming using DNS + NAT forwarding
 A solution for accessing your own Plex server as "local" when connecting through a separate network segment, bypassing Plex's remote streaming restrictions without requiring Plex Pass.
 
 ## The Problem
