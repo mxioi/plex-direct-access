@@ -1,0 +1,14 @@
+[Unit]
+Description=DNS for Plex direct access
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=forking
+ExecStart=/usr/sbin/dnsmasq --conf-file=/etc/dnsmasq.d/plex-direct.conf --pid-file=/var/run/dnsmasq-plex.pid
+ExecStop=/bin/kill -TERM $MAINPID
+PIDFile=/var/run/dnsmasq-plex.pid
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
